@@ -1,0 +1,8 @@
+<app-paginator-view
+  [itemsPerPage]="itemsPerPage | async"
+  [pageNum]="pageNum | async"
+  (newItemsPerPage)="updateCount($event)"
+  (nextPage)="updatePageNum($event)"
+  (previousPage)="updatePageNum($event)"
+>
+</app-paginator-view>

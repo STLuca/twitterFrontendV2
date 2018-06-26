@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+
+  newPage() {
+    console.log('hi');
+  }
+
+  log(x) {
+    console.log(x);
+  }
 }
