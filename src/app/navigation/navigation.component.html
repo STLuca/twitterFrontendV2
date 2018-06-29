@@ -9,8 +9,8 @@
     <mat-toolbar color="primary">Menu</mat-toolbar>
     <mat-nav-list>
       <a mat-list-item href="#">Login</a>
-      <a mat-list-item href="#">Feed</a>
-      <a mat-list-item href="#">My Page</a>
+      <a mat-list-item [routerLink]="['/feed']">Feed</a>
+      <a mat-list-item [routerLink]="['hi']">My Page</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>

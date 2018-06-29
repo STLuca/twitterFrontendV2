@@ -1,0 +1,25 @@
+.card {
+    max-width: 400px;
+  }
+  
+  .example-header-image {
+    background-image: url('https://www.viawater.nl/files/default-user.png');
+    background-size: cover;
+  }
+
+.mat-card .mat-card-content {
+  margin-bottom: 0;
+}
+
+.mat-card .mat-card-content p {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.mat-card .mat-card-header {
+  margin-bottom: 7px;
+}
+
+.mat-card .mat-card-actions {
+  padding-top: 0
+}

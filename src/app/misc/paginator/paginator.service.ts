@@ -11,22 +11,23 @@ export class PaginatorService {
 
     constructor(
         private route: ActivatedRoute,
-        private router: Router) {
-            this.route.queryParams.subscribe(x => console.log(x));
-        }
+        private router: Router
+    ) {
+    }
 
     UpdateItemsPerPage(count: number) {
-        this.router.navigate(['.'], {
+        this.router.navigate([], {
             queryParams:  { count: count, page: 0 },
-            queryParamsHandling: 'merge'
+            queryParamsHandling: 'merge',
+            relativeTo: this.route
         });
     }
 
     updatePage(newPage: number) {
-        console.log('updating page');
-        this.router.navigate(['.'], {
+        this.router.navigate([], {
             queryParams:  { page: newPage},
-            queryParamsHandling: 'merge'
+            queryParamsHandling: 'merge',
+            relativeTo: this.route
         });
     }
 

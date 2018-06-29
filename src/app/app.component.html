@@ -1,7 +1,13 @@
-
+<app-tweet-container></app-tweet-container>
+<app-user-container></app-user-container>
 <app-paginator-container
 ></app-paginator-container>
 
-<a [routerLink]="['user']" [queryParams]="{id: 1}" routerLinkActive="active">Crisis Center</a>
-<a [routerLink]="['user']" [queryParams]="{a: 1}" routerLinkActive="active">Crisis Center</a>
+<button (click)="printRoute()">print route</button>
+<a [routerLink]="['']">empty route</a>
+<a [routerLink]="['feed']">feed</a>
+<a [routerLink]="['feed/a/b/c']">abc</a>
+<a [routerLink]="['feed/follower/new']">ab</a>
+<router-outlet name="filters"></router-outlet>
 <router-outlet></router-outlet>
+
