@@ -1,5 +1,13 @@
-<p>
+<h2 class="mat-title" align="center">
   Feed
-</p>
+</h2>
 
+<app-tweet-form></app-tweet-form>
 
+<app-checkbox-tree-container></app-checkbox-tree-container>
+
+<ng-container *ngFor="let tweet of tweets">
+  <app-tweet-container [tweet]="tweet"></app-tweet-container>
+</ng-container>
+
+<app-paginator-container></app-paginator-container>

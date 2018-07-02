@@ -66,7 +66,7 @@ export const followTypeFilter: Tree<string>[] = [
         children: timeOrderFilter
     },
     {
-        val: 'follower',
+        val: 'followers',
         children: timeOrderFilter
     }
 ];

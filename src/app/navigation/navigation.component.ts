@@ -3,6 +3,7 @@ import { BreakpointObserver, Breakpoints, BreakpointState } from '@angular/cdk/l
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { ActivatedRoute } from '@angular/router';
+import { LoginService } from '../domain/services/Login.service';
 
 @Component({
   selector: 'app-navigation',
@@ -16,10 +17,18 @@ export class NavigationComponent {
       map(result => result.matches)
     );
 
+  user: Observable<string>;
+
   constructor(
     private breakpointObserver: BreakpointObserver,
-    private route: ActivatedRoute ) {
-      console.log(this.route.url);
-    }
-
+    private route: ActivatedRoute,
+    private loginService: LoginService
+  ) {
+    this.user = this.loginService.currentUser();
+    // this.loginService.login('Susan', 'mypassword');
   }
+
+  logout() {
+    this.loginService.logout();
+  }
+}

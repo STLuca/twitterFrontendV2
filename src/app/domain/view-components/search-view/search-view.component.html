@@ -1,0 +1,13 @@
+<mat-form-field>
+  <input matInput type="search" placeholder="Search for a user" (change)="newSearch.emit($event.target.value)">
+</mat-form-field>
+
+<p class="mat-body" align="center">
+  Searching for: {{searchName}}
+</p>
+
+<ng-container *ngFor="let user of users">
+  <app-user-container [user]="user"></app-user-container>
+</ng-container>
+
+<app-paginator-container></app-paginator-container>

@@ -1,5 +1,8 @@
 .card {
     max-width: 400px;
+    margin: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
   }
   
   .example-header-image {
@@ -22,4 +25,8 @@
 
 .mat-card .mat-card-actions {
   padding-top: 0
+}
+
+.thumbsUp{
+  color: green;
 }

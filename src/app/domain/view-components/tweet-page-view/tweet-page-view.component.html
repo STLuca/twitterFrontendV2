@@ -1,0 +1,11 @@
+<app-tweet-container [tweet]="tweet" *ngIf="!loading"></app-tweet-container>
+
+<app-tweet-form *ngIf="!loading" [replyToID]="tweet.id"></app-tweet-form>
+
+<app-checkbox-tree-container></app-checkbox-tree-container>
+
+<ng-container *ngFor="let tweet of tweets">
+  <app-tweet-container [tweet]="tweet"></app-tweet-container>
+</ng-container>
+
+<app-paginator-container></app-paginator-container>

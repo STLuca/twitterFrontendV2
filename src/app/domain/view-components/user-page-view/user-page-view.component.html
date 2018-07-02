@@ -1,0 +1,14 @@
+
+<app-user-container [user]="user" *ngIf="user"></app-user-container>
+<button mat-raised-button color="primary" class="followButton" (click)="toggleFollowMethod()">{{followStatus}}</button>
+<app-checkbox-tree-container></app-checkbox-tree-container>
+
+<ng-container *ngFor="let tweet of tweets">
+  <app-tweet-container [tweet]="tweet"></app-tweet-container>
+</ng-container>
+
+<ng-container *ngFor="let user of users">
+  <app-user-container [user]="user"></app-user-container>
+</ng-container>
+
+<app-paginator-container></app-paginator-container>

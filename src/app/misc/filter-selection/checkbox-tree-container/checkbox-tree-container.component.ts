@@ -18,7 +18,6 @@ export class CheckboxTreeContainerComponent implements OnInit {
     private service: FilterSelectionService
   ) {
     this.groups = this.service.getRadioGroup();
-    console.log('hi');
   }
 
   ngOnInit() {

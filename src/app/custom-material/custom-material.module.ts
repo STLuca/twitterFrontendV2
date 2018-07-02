@@ -8,6 +8,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatSelectModule} from '@angular/material/select';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatCardModule} from '@angular/material/card';
+import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatPaginatorModule} from '@angular/material/paginator';
 @NgModule({
   imports: [
@@ -20,7 +21,8 @@ import {MatPaginatorModule} from '@angular/material/paginator';
     MatSelectModule,
     MatGridListModule,
     MatCardModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    MatTooltipModule
   ],
   exports: [
     MatButtonModule,
@@ -32,7 +34,8 @@ import {MatPaginatorModule} from '@angular/material/paginator';
     MatSelectModule,
     MatGridListModule,
     MatCardModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    MatTooltipModule
   ]
 })
 export class CustomMaterialModule { }

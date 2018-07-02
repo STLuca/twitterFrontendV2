@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { User } from '../../models/User';
 import { Observable, of } from 'rxjs';
 import { testUser } from '../../models/test';
+import { UserService } from '../../services/User.service';
 
 @Component({
   selector: 'app-user-container',
@@ -10,13 +11,24 @@ import { testUser } from '../../models/test';
 })
 export class UserContainerComponent implements OnInit {
 
-  user: Observable<User>;
+  @Input() user: User;
 
-  constructor() {
-    this.user = of(testUser);
-   }
+  constructor(
+    private userService: UserService
+  ) {}
 
   ngOnInit() {
   }
 
+  navigateToTweets(username: string) {
+    this.userService.navigateToUser(username);
+  }
+
+  navigateToFollowing(username: string) {
+    this.userService.navigateToUserFollowing(username);
+  }
+
+  navigateToFollowers(username: string) {
+    this.userService.navigateToUserFollowers(username);
+  }
 }

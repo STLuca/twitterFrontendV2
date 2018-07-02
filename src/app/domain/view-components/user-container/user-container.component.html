@@ -1,3 +1,7 @@
 <app-user-view
-  [user]="user | async">
+  [user]="user"
+  (tweetsClicked)="navigateToTweets($event)"
+  (followingClicked)="navigateToFollowing($event)"
+  (followersClicked)="navigateToFollowers($event)"
+  >
 </app-user-view>

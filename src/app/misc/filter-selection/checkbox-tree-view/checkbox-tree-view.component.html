@@ -1,11 +1,15 @@
-<ng-container *ngFor="let group of groups; let i = index">
+<div>
 
-  <div >
-      <mat-button-toggle-group name="fontStyle" aria-label="Font Style" [value]="group.selectedItem" class="buttonGroup">
-        <ng-container *ngFor="let val of group.vals">
-            <mat-button-toggle value="{{val}}" (change)="emitNewValue(val, i)">{{val}}</mat-button-toggle>
-        </ng-container>
-      </mat-button-toggle-group>
-  </div>
+    <ng-container *ngFor="let group of groups; let i = index">
 
-</ng-container>
+        <div class="buttonGroup">
+            <mat-button-toggle-group name="fontStyle" aria-label="Font Style" [value]="group.selectedItem">
+                <ng-container *ngFor="let val of group.vals">
+                    <mat-button-toggle value="{{val}}" (change)="emitNewValue(val, i)">{{val | uppercase}}</mat-button-toggle>
+                </ng-container>
+            </mat-button-toggle-group>
+        </div>
+        
+    </ng-container>
+
+</div>

@@ -7,7 +7,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class PaginatorViewComponent implements OnInit {
 
-  itemsPerPageOptions: number[] = [5, 10, 25, 50];
+  itemsPerPageOptions: number[] = [5, 10, 20, 40];
 
   @Input() itemsPerPage: number;
   @Input() pageNum: number;

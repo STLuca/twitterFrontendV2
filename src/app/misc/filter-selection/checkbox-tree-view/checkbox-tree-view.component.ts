@@ -15,7 +15,6 @@ export class CheckboxTreeViewComponent {
   constructor() { }
 
   emitNewValue(value: string, index: number) {
-    console.log(value, index);
     this.newValue.emit(new NewCheckboxValue(value, index));
   }
 

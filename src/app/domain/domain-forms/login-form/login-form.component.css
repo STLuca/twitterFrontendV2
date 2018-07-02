@@ -1,0 +1,30 @@
+/* .FormElement{
+    display: grid;
+    grid-template-columns: 80px 250px;
+    margin: auto;
+} */
+
+.loginButton button {
+    margin: auto;
+    display: block;
+}
+
+.form{
+    margin: auto;
+}
+
+.container{
+    max-width: 400px;
+    margin: auto;
+    border: 1px solid #ccc;
+    border-radius: 16px;
+    padding: 16px;
+}
+
+.formFieldContainer {
+    margin: auto;
+}
+
+.formFieldContainer mat-form-field {
+    display: block;
+}

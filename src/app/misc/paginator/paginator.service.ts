@@ -33,7 +33,7 @@ export class PaginatorService {
 
     getItemsPerPage(): Observable<number> {
         return this.route.queryParamMap.pipe(
-            map(x => Number(x.get('count')) || 10)
+            map(x => Number(x.get('count')) || 20)
         );
     }
 

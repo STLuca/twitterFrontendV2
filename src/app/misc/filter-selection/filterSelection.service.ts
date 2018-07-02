@@ -16,13 +16,9 @@ export class FilterSelectionService {
         private router: Router,
         @Inject('tree') private tree: Tree<string>[]
     ) {
-        console.log('to string: ', this.router.url);
         this.vals = this.route.url.pipe(
-            tap(x => console.log(x)),
             map(segments => segments.map(segment => segment.path)),
-            tap(x => console.log(x)),
-            map(segments => this.convertToView(this.tree, segments)),
-            tap(x => console.log(x))
+            map(segments => this.convertToView(this.tree, segments))
         );
     }
 
@@ -35,7 +31,6 @@ export class FilterSelectionService {
 
         const newSegments: string[] = Object.assign([...segments], {[val.index]: val.newValue});
         // [...segments, [val.index]: val.newValue];
-        console.log(this.fixVals(this.tree, newSegments));
         this.router.navigate(
             [...this.fixVals(this.tree, newSegments)],
             {
@@ -47,8 +42,6 @@ export class FilterSelectionService {
     }
 
     private convertToView(tree: Tree<string>[], vals: string[]): RadioGroup<string>[] {
-        console.log(validValues(tree, vals));
-        console.log(tree, vals);
         if (validValues(tree, vals)) {
             return this.convertToViewIntermediate(tree, vals);
         } else {

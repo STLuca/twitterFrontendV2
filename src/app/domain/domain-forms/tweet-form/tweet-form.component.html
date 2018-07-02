@@ -1,0 +1,33 @@
+<!--
+<div class="mainContainer">
+    <div class="inputContainer">
+        <mat-form-field class="formField">
+             <textarea matInput placeholder="Message" [(ngModel)]="message" class="input"></textarea> 
+        </mat-form-field>
+    </div>
+    
+    <div>Characters: {{message.length}}/160</div>
+    <div *ngIf="replyToID">Replying to: {{replyToID}}</div>
+    <button mat-raised-button [disabled]="message.length == 0 || message.length > 160" (click)="createTweet()"><mat-icon>send</mat-icon></button>
+    
+</div>
+
+-->
+<div class="container">
+    <h2 class="mat-title" align="center"> Make a tweet! </h2>
+    <form [formGroup]="tweetForm" novalidate (ngSubmit)="createTweet()">
+    
+      <div class="formFieldContainer">
+        <mat-form-field appearance="outline">
+          <textarea matInput [matTextareaAutosize]=true type="text" formControlName="message"  placeholder="Message"></textarea>
+          <mat-hint>{{messageLength | async}} / 160</mat-hint>
+          
+        </mat-form-field>
+      </div>
+    
+      <div class="registerButton">
+        <button mat-raised-button (click)="createTweet()" color="primary" [disabled]="!tweetForm.valid">Tweet</button>
+      </div>
+    </form>
+    
+  </div>

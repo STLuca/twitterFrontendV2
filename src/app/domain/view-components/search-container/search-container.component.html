@@ -1,0 +1,5 @@
+<app-search-view
+  [users]="users | async"
+  [searchName]="searchName | async"
+  (newSearch)="newSearch($event)"
+></app-search-view>

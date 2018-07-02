@@ -1,16 +1,22 @@
-<div>
-  <p class="mat-caption">Items per page:</p>
-    <mat-form-field>
-
-  <mat-select #matSelect [value]="itemsPerPage" (selectionChange)="newItemsPerPage.emit(matSelect.value)">
-    <mat-option *ngFor="let num of itemsPerPageOptions" [value]="num">
-        {{ num }}
-    </mat-option>
-  </mat-select>
-</mat-form-field>
-
-  <p class="mat-caption">{{minItemNumber}} - {{maxItemNumber}}</p>
+<div class="container">
+  <div>
+    <p class="mat-caption">Items per page:</p>
+  <mat-form-field>
+  
+    <mat-select #matSelect [value]="itemsPerPage" (selectionChange)="newItemsPerPage.emit(matSelect.value)">
+      <mat-option *ngFor="let num of itemsPerPageOptions" [value]="num">
+          {{ num }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  
+    <p class="mat-caption">{{minItemNumber}} - {{maxItemNumber}}</p>
+  </div>
+  
+  <button mat-icon-button (click)="previousPage.emit(pageNum === 0 ? 0 : pageNum - 1)" [disabled]="isPage0">
+    <mat-icon>keyboard_arrow_left</mat-icon>
+  </button>
+  <button mat-icon-button (click)="nextPage.emit(pageNum + 1)">
+    <mat-icon>keyboard_arrow_right</mat-icon>
+  </button>
 </div>
-
-<button mat-icon-button (click)="previousPage.emit(pageNum === 0 ? 0 : pageNum - 1)" [disabled]="isPage0"><mat-icon>keyboard_arrow_left</mat-icon></button>
-<button mat-icon-button (click)="nextPage.emit(pageNum + 1)"><mat-icon>keyboard_arrow_right</mat-icon></button>

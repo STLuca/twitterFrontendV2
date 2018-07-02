@@ -1,9 +1,12 @@
 <mat-card class="card">
+
   <mat-card-header>
-    <div mat-card-avatar class="example-header-image"></div>
-    <mat-card-title>{{tweet.user.username}}</mat-card-title>
-    <mat-card-subtitle *ngIf="tweet.replyTo">reply to: {{tweet.replyTo}}</mat-card-subtitle>
+    <img mat-card-avatar src="{{tweet.user.pictureUrl}}">
+    <mat-card-title>
+      <button mat-button (click)="navigateToUser.emit(tweet.user.username)">{{tweet.user.username}}</button>
+    </mat-card-title>
   </mat-card-header>
+
   <mat-card-content>
     <p class="message" align="center">
       {{tweet.message}}
@@ -12,9 +15,13 @@
       {{tweet.timestamp | date:'short' }}
     </p>
   </mat-card-content>
+
   <mat-card-actions align="end">
-    <button mat-icon-button>{{tweet.numOfLikes}} <mat-icon>thumb_up</mat-icon></button>
-    <button mat-icon-button>{{tweet.numOfReplies}} <mat-icon>comment</mat-icon></button>
-    
+    <button *ngIf="tweet.replyTo != 0" mat-icon-button matTooltip="{{tweet.replyTo}}" (click)="navigateToTweet.emit(tweet.replyTo)">
+      <mat-icon>reply</mat-icon>
+    </button>
+    <button mat-icon-button (click)="toggleLikeMethod()">{{tweet.numOfLikes}} <mat-icon [class.thumbsUp]="tweet.liked">thumb_up</mat-icon></button>
+    <button mat-icon-button (click)="navigateToTweet.emit(tweet.id)">{{tweet.numOfReplies}} <mat-icon>comment</mat-icon></button>
   </mat-card-actions>
+  
 </mat-card>

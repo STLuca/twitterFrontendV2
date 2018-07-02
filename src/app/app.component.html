@@ -1,13 +1,3 @@
-<app-tweet-container></app-tweet-container>
-<app-user-container></app-user-container>
-<app-paginator-container
-></app-paginator-container>
-
-<button (click)="printRoute()">print route</button>
-<a [routerLink]="['']">empty route</a>
-<a [routerLink]="['feed']">feed</a>
-<a [routerLink]="['feed/a/b/c']">abc</a>
-<a [routerLink]="['feed/follower/new']">ab</a>
-<router-outlet name="filters"></router-outlet>
+<app-navigation></app-navigation>
 <router-outlet></router-outlet>
 

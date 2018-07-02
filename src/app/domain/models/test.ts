@@ -4,7 +4,7 @@ import { tweetDTOToTweet, Tweet } from './Tweet';
 import { User, userDTOToUser } from './User';
 
 const testTweetDTO: TweetDTO = {
-    id: 2,
+    id: '2',
     userID: 1,
     message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' +
              ' Aenean sed enim eu tellus vulputate ullamcorper. Nullam aliquet aliquam felis, vel amet.',

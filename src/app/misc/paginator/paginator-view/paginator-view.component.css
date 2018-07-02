@@ -3,12 +3,17 @@ mat-form-field {
 }
 
 * {
-    display: inline;
-    
+    display: inline-block;
+    margin: auto;
 }
 
 p {
     margin-left: 25px;
     margin-right: 8px;
     color: rgba(0,0,0,.54);
+}
+
+.container {
+    display: block;
+    text-align: center;
 }
