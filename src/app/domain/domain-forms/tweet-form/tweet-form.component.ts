@@ -41,7 +41,7 @@ export class TweetFormComponent implements OnInit {
 
   createTweet() {
     if (this.tweetForm.valid) {
-      // this.tweetService.postTweet(this.tweetForm.get('message').value, this.replyToID);
+      this.tweetService.postTweet(this.tweetForm.get('message').value, this.replyToID);
       this.tweetForm.get('message').reset();
     }
 

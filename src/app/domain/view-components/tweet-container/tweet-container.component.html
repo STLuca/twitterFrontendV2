@@ -1,5 +1,5 @@
 <app-tweet-view
-  [tweet]="tweet"
+  [tweet]="tweet$ | async"
   (toggleLike)="toggleLike($event)"
   (navigateToTweet)="navigateToTweet($event)"
   (navigateToUser)="navigateToUser($event)"

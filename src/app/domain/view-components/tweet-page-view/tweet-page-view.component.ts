@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, ChangeDetectionStrategy } from '@angular/core';
 import { Tweet } from '../../models/Tweet';
+import { User } from '../../models/User';
 
 @Component({
   selector: 'app-tweet-page-view',
@@ -11,6 +12,7 @@ export class TweetPageViewComponent implements OnInit {
 
   @Input() tweet: Tweet;
   @Input() tweets: Tweet[];
+  @Input() users: User[];
 
   constructor() { }
 

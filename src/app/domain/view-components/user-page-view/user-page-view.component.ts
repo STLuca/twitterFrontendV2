@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, ChangeDetectionStrategy } from '@angular/core';
 import { User, toggleUserFollow } from '../../models/User';
 import { Tweet } from '../../models/Tweet';
 
@@ -12,7 +12,8 @@ export class ToggleFollowEvent {
 @Component({
   selector: 'app-user-page-view',
   templateUrl: './user-page-view.component.html',
-  styleUrls: ['./user-page-view.component.css']
+  styleUrls: ['./user-page-view.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class UserPageViewComponent implements OnInit {
 
@@ -25,7 +26,7 @@ export class UserPageViewComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log(this.users);
+    console.log('users: ', this.users);
   }
 
   get followStatus(): string {

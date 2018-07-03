@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, merge } from 'rxjs';
 import { ActivatedRoute, Router } from '@angular/router';
-import { switchMap, map, filter, startWith, tap } from 'rxjs/operators';
+import { switchMap, map, filter, startWith, tap, debounceTime } from 'rxjs/operators';
 import { Tweet } from '../models/Tweet';
 import { User, userDTOToUser } from '../models/User';
 import { ServerDTO, serverDTOToTweets, serverDTOToUsers } from '../models/serverDTO';
@@ -19,6 +19,7 @@ export class UserService {
 
     getUser(): Observable<User> {
         return this.route.paramMap.pipe(
+            debounceTime(100),
             filter(params => params.has('userID')),
             map(params => params.get('userID')),
             switchMap(userID => this.http.get<UserDTO>('http://localhost:8080/user/' + userID)),
@@ -27,13 +28,11 @@ export class UserService {
     }
 
     getUsers(): Observable<User[]> {
-        console.log('get users');
-        this.route.url.subscribe(x => console.log('new route url: ', x));
-        this.route.queryParamMap.subscribe(x => console.log('new route params: ', x));
         return merge(this.route.url, this.route.queryParamMap).pipe(
-            tap(_ => console.log('making user request')),
+            debounceTime(100),
             switchMap(_ => this.http.get<ServerDTO>('http://localhost:8080' + this.router.url)),
-            map(x => serverDTOToUsers(x)),
+            map(x => x.tweets.length ? [] : serverDTOToUsers(x)),
+            tap(console.log),
             startWith([])
         );
     }

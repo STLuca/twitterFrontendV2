@@ -1,10 +1,11 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, ChangeDetectionStrategy } from '@angular/core';
 import { User } from '../../models/User';
 
 @Component({
   selector: 'app-search-view',
   templateUrl: './search-view.component.html',
-  styleUrls: ['./search-view.component.css']
+  styleUrls: ['./search-view.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SearchViewComponent implements OnInit {
 

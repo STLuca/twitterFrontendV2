@@ -18,7 +18,7 @@ export class LoginService {
             filter(x => x !== ''),
             debounceTime(500),
             switchMap(auth => this.http.get<string>('http://localhost:8080/user/login')),
-            tap(x => console.log('new user')),
+            tap(console.log)
         ).subscribe( name => this.loggedInAs.next(name),
                             err => this.loggedInAs.next(''));
         this.loggedInAs.pipe(

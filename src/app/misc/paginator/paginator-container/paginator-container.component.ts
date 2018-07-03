@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { PaginatorService } from '../paginator.service';
 import { Observable } from 'rxjs';
 
@@ -6,7 +6,10 @@ import { Observable } from 'rxjs';
   selector: 'app-paginator-container',
   templateUrl: './paginator-container.component.html',
   styleUrls: ['./paginator-container.component.css'],
-  providers: [PaginatorService]
+  providers: [
+    PaginatorService
+  ],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class PaginatorContainerComponent {
 

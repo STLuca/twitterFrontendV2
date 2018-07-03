@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { userFilter } from '../../../misc/filter-selection/TreeValues';
 import { Tweet } from '../../models/Tweet';
 import { User } from '../../models/User';
@@ -17,7 +17,8 @@ import { testUser } from '../../models/test';
     TweetsService,
     UserService,
     { provide: 'tree', useValue: userFilter }
-  ]
+  ],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class UserPageContainerComponent implements OnInit {
 
@@ -35,7 +36,6 @@ export class UserPageContainerComponent implements OnInit {
       startWith(''),
       switchMap(_ => this.userService.getUser()),
     );
-    // this.user = this.userService.getUser();
     this.tweets = this.tweetService.getTweets();
     this.users = this.userService.getUsers();
   }

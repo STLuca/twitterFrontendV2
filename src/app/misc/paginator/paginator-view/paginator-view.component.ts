@@ -1,9 +1,10 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
   selector: 'app-paginator-view',
   templateUrl: './paginator-view.component.html',
-  styleUrls: ['./paginator-view.component.css']
+  styleUrls: ['./paginator-view.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class PaginatorViewComponent implements OnInit {
 

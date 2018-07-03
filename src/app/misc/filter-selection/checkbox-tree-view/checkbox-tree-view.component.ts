@@ -1,11 +1,12 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, ChangeDetectionStrategy } from '@angular/core';
 import { RadioGroup } from '../radioGroup';
 import { NewCheckboxValue } from '../events';
 
 @Component({
   selector: 'app-checkbox-tree-view',
   templateUrl: './checkbox-tree-view.component.html',
-  styleUrls: ['./checkbox-tree-view.component.css']
+  styleUrls: ['./checkbox-tree-view.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CheckboxTreeViewComponent {
 

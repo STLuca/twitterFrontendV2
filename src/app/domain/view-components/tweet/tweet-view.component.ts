@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, ChangeDetectionStrategy } from '@angular/core';
 import { Tweet } from '../../models/Tweet';
 
 export class ToggleLikeEvent {
@@ -12,7 +12,8 @@ export class ToggleLikeEvent {
 @Component({
   selector: 'app-tweet-view',
   templateUrl: './tweet-view.component.html',
-  styleUrls: ['./tweet-view.component.css']
+  styleUrls: ['./tweet-view.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class TweetViewComponent implements OnInit {
 

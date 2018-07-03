@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, ChangeDetectionStrategy } from '@angular/core';
 import { User } from '../../models/User';
 
 export class ToggleFollowEvent {
@@ -10,7 +10,8 @@ export class ToggleFollowEvent {
 @Component({
   selector: 'app-user-view',
   templateUrl: './user-view.component.html',
-  styleUrls: ['./user-view.component.css']
+  styleUrls: ['./user-view.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class UserViewComponent implements OnInit {
 

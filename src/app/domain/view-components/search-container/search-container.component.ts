@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { User } from '../../models/User';
 import { testUser } from '../../models/test';
@@ -12,7 +12,8 @@ import { map } from 'rxjs/operators';
   styleUrls: ['./search-container.component.css'],
   providers: [
     UserService
-  ]
+  ],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SearchContainerComponent implements OnInit {
 

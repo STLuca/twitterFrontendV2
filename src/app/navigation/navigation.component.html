@@ -12,6 +12,7 @@
       <a mat-list-item [routerLink]="['/register']">Register</a>
       <a mat-list-item [routerLink]="['/feed']">Feed</a>
       <a mat-list-item [routerLink]="['user/search']">Search</a>
+      <a mat-list-item (click)="generateTestData()">Generate data</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -32,5 +33,9 @@
         </button>
       </span>
     </mat-toolbar>
+    <div class="content">
+      <ng-content></ng-content>
+    </div>
+    
   </mat-sidenav-content>
 </mat-sidenav-container>
