@@ -1,20 +1,25 @@
 A few short demonstrations
 
-Login
+Register
 ![](https://thumbs.gfycat.com/InbornThinCockatiel-size_restricted.gif)
 
-Register
+Login
 ![](https://thumbs.gfycat.com/GroundedJadedJunebug-size_restricted.gif)
 
 Feed    
-![](https://thumbs.gfycat.com/UnequaledSlightAfricanparadiseflycatcher-size_restricted.gif)
+![](https://thumbs.gfycat.com/LargeDiscreteAnglerfish-size_restricted.gif)
 
 Tweet page
-![](https://thumbs.gfycat.com/SafeHilariousHart-size_restricted.gif)
+![](https://thumbs.gfycat.com/GrouchySeparateIchidna-size_restricted.gif)
 
 User Page
-![](https://thumbs.gfycat.com/LightDelightfulArkshell-size_restricted.gif)
+![](https://thumbs.gfycat.com/DeficientSpectacularBedlingtonterrier-size_restricted.gif)
+
+Search
+![](https://thumbs.gfycat.com/EssentialKindBluebottle-size_restricted.gif)
 
 Following a user
+![](https://thumbs.gfycat.com/LightDelightfulArkshell-size_restricted.gif)
 
 Unfollowing a user
+![](https://thumbs.gfycat.com/NimbleFormalFoxterrier-size_restricted.gif)
