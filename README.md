@@ -4,7 +4,7 @@ Register
 ![](https://thumbs.gfycat.com/InbornThinCockatiel-size_restricted.gif)
 
 Login                    
-![](https://thumbs.gfycat.com/GroundedJadedJunebug-size_restricted.gif)
+![](https://thumbs.gfycat.com/GrizzledWellmadeLacewing-size_restricted.gif)
 
 Feed                   
 ![](https://thumbs.gfycat.com/LargeDiscreteAnglerfish-size_restricted.gif)
