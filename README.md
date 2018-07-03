@@ -1,7 +1,7 @@
 A few short demonstrations
 
 Login
-![](https://gfycat.com/InbornThinCockatiel)
+![](https://thumbs.gfycat.com/InbornThinCockatiel-size_restricted.gif)
 
 Register
 ![](https://thumbs.gfycat.com/GroundedJadedJunebug-size_restricted.gif)
